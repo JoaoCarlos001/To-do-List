@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Oswald&family=Poppins:wght@600;700&family=Righteous&family=Roboto:ital,wght@1,500&family=Ubuntu:ital,wght@1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(25deg, rgb(17, 13, 13), red);
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.todo{
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+    
+}
+
+.todo_title{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    box-shadow: 1px 1px 5px black;
+    font-size: 3rem;
+    border-radius: 15px;
+}
+
+.todo_list{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo_item{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 15px;
+}
+
+.todo_item > div {
+    width: 80%;
+}
+
+.todo_item:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    color: rgb(175, 174, 174);
+    background-color: rgb(73, 45, 45);
+}
+
+.todo_item > input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.todo_item > input[type='button'],
+.todo_item > input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+    font: inherit;
+}
+
+.todo_item > input[type='checkbox']:checked + div {
+    text-decoration: line-through;
+}
+
+.todo_new-item{
+    background-color: rgb(73, 45, 45);
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    box-shadow: 1px 1px 5px black;
+    margin: 10px;
+    font: inherit;
+    border-radius: 15px;
+    color: rgb(175, 174, 174);
+}
+
+.todo_new-item > input {
+    background-color: rgb(73, 45, 45);
+    border: none;
+    width: 80%;
+    outline: none;
+    font: inherit;
+    border-radius: 10px;
+}
+
+.todo_new-item > input::placeholder{
+    font-style: italic;
+    font-weight: normal;
+}
